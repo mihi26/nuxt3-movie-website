@@ -5,7 +5,10 @@ export default defineNuxtConfig({
     "~/assets/style/global.scss",
   ],
   runtimeConfig: {
-    apiKey: '',
-    apiBaseUrl: '',
+    apiBaseUrl: process.env.NUXT_API_BASE_URL,
+    apiAccessToken: process.env.NUXT_API_ACCESS_TOKEN,
+    public: {
+      imgBaseUrl: process.env.NUXT_PUBLIC_IMG_BASE_URL
+    }
   }
 })
